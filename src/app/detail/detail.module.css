@@ -1,0 +1,477 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/* 상세 히어로 섹션 */
+.detailHero {
+  width: 100%;
+  position: relative;
+}
+
+.heroImageContainer {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #f59e0b;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* 가격 섹션 */
+.priceSection {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.priceBox {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.priceInfo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.priceLabel {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.originalPrice {
+  font-size: 1.1rem;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.discountBadge {
+  background: #ef4444;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.finalPrice {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+.reserveButton {
+  background: #1a1a1a;
+  color: white;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.reserveButton:hover {
+  background: #f59e0b;
+  transform: scale(1.05);
+}
+
+/* 탭 섹션 */
+.tabSection {
+  background: white;
+  border-bottom: 2px solid #e5e7eb;
+  position: sticky;
+  top: 85px;
+  z-index: 99;
+}
+
+.tabs {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 1.2rem 2rem;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab:hover {
+  color: #1a1a1a;
+  background: #f9fafb;
+}
+
+.activeTab {
+  color: #f59e0b;
+  border-bottom-color: #f59e0b;
+  background: white;
+}
+
+/* 콘텐츠 섹션 */
+.contentSection {
+  padding: 4rem 0;
+  background: white;
+  min-height: 60vh;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contentTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2rem 0;
+}
+
+/* 상품 정보 */
+.infoContent,
+.scheduleContent,
+.reviewContent {
+  width: 100%;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.infoCard {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.infoCard h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+}
+
+.infoCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoCard li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.infoCard li:last-child {
+  border-bottom: none;
+}
+
+/* 하이라이트 섹션 */
+.highlightSection {
+  background: linear-gradient(135deg, #fff5e6 0%, #ffffff 100%);
+  padding: 3rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.highlightSection h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.highlightItem {
+  text-align: center;
+}
+
+.highlightIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.highlightItem h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.highlightItem p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 일정 안내 */
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.scheduleDay {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dayHeader {
+  background: linear-gradient(135deg, #1a1a1a 0%, #374151 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dayNumber {
+  background: #f59e0b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.dayTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.scheduleList {
+  list-style: none;
+  padding: 2rem;
+  margin: 0;
+}
+
+.scheduleList li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  color: #4b5563;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scheduleList li:last-child {
+  border-bottom: none;
+}
+
+.scheduleList li::before {
+  content: "✓";
+  background: #f59e0b;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* 이용 후기 */
+.reviewStats {
+  background: linear-gradient(135deg, #f59e0b 0%, #fb923c 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.reviewScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scoreNumber {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.scoreStars {
+  font-size: 2rem;
+}
+
+.reviewCount {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reviewCard {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.reviewer {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.reviewDate {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.reviewRating {
+  margin-left: auto;
+  font-size: 1.1rem;
+}
+
+.reviewText {
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .priceBox {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .priceInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tabs {
+    flex-direction: row;
+  }
+
+  .tab {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+}

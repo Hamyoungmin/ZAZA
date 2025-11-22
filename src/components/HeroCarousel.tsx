@@ -24,7 +24,11 @@ const slides = [
   },
 ];
 
-export default function HeroCarousel() {
+interface HeroCarouselProps {
+  onNavigate?: () => void;
+}
+
+export default function HeroCarousel({ onNavigate }: HeroCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
@@ -41,7 +45,10 @@ export default function HeroCarousel() {
 
   // 자동 슬라이드 (선택사항)
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    
     return () => clearInterval(timer);
   }, []);
 

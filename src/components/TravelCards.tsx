@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './TravelCards.module.css';
 
 const travelData = [
@@ -34,12 +33,11 @@ export default function TravelCards() {
           {travelData.map((item) => (
             <div key={item.id} className={styles.card}>
               <div className={styles.cardImage}>
-                <Image 
+                {/* 실제 이미지로 교체 시 Next.js Image 컴포넌트 사용 */}
+                <img 
                   src={item.image} 
                   alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style={{ objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
               <div className={styles.cardContent}>

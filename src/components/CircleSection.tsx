@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './CircleSection.module.css';
 
 const circleData = [
@@ -28,12 +27,19 @@ export default function CircleSection() {
           {circleData.map((item) => (
             <div key={item.id} className={styles.circleItem}>
               <div className={styles.circleImageWrapper}>
-                <Image
+                {/* 실제 이미지로 교체 시 Next.js Image 컴포넌트 사용 */}
+                <img
                   src={item.image}
                   alt={item.text}
-                  fill
                   className={styles.circleImage}
-                  sizes="300px"
+                  style={{ 
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
                 <div className={styles.circleOverlay}>
                   <p className={styles.circleText}>{item.text}</p>
