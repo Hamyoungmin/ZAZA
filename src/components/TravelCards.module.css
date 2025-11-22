@@ -39,17 +39,7 @@
   height: 250px;
   overflow: hidden;
   background-color: #e5e7eb;
-}
-
-.cardImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .cardImage img {
-  transform: scale(1.05);
+  position: relative;
 }
 
 .cardContent {

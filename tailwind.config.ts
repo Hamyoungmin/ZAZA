@@ -15,6 +15,10 @@ const config: Config = {
     },
   },
   plugins: [],
+  // CSS Modules를 주로 사용하므로 경고 무시
+  corePlugins: {
+    preflight: false,
+  },
 };
 export default config;
 

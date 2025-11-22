@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './TravelCards.module.css';
 
 const travelData = [
@@ -33,7 +34,13 @@ export default function TravelCards() {
           {travelData.map((item) => (
             <div key={item.id} className={styles.card}>
               <div className={styles.cardImage}>
-                <img src={item.image} alt={item.title} />
+                <Image 
+                  src={item.image} 
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{item.title}</h3>

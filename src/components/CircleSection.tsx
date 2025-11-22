@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './CircleSection.module.css';
 
 const circleData = [
@@ -27,10 +28,12 @@ export default function CircleSection() {
           {circleData.map((item) => (
             <div key={item.id} className={styles.circleItem}>
               <div className={styles.circleImageWrapper}>
-                <img
+                <Image
                   src={item.image}
                   alt={item.text}
+                  fill
                   className={styles.circleImage}
+                  sizes="300px"
                 />
                 <div className={styles.circleOverlay}>
                   <p className={styles.circleText}>{item.text}</p>

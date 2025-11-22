@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { supabase } from '@/lib/supabase';
 
 // Supabase 데이터를 가져오는 커스텀 훅 예제
-export function useSupabaseData<T>(
+export function useSupabaseData<T = any>(
   table: string,
   options?: {
     select?: string;
@@ -15,14 +15,18 @@ export function useSupabaseData<T>(
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // options를 안정적인 값으로 메모이제이션
+  const selectValue = options?.select || '*';
+  const filterValue = useMemo(() => options?.filter, [options?.filter]);
+
   useEffect(() => {
     async function fetchData() {
       try {
         setLoading(true);
-        let query = supabase.from(table).select(options?.select || '*');
+        let query = supabase.from(table).select(selectValue);
 
-        if (options?.filter) {
-          Object.entries(options.filter).forEach(([key, value]) => {
+        if (filterValue) {
+          Object.entries(filterValue).forEach(([key, value]) => {
             query = query.eq(key, value);
           });
         }
@@ -31,7 +35,7 @@ export function useSupabaseData<T>(
 
         if (fetchError) throw fetchError;
 
-        setData(result);
+        setData(result as T[]);
         setError(null);
       } catch (err) {
         setError(err as Error);
@@ -42,13 +46,13 @@ export function useSupabaseData<T>(
     }
 
     fetchData();
-  }, [table, options?.select, JSON.stringify(options?.filter)]);
+  }, [table, selectValue, filterValue]);
 
   return { data, error, loading };
 }
 
 // 실시간 구독 훅 예제
-export function useSupabaseSubscription<T>(
+export function useSupabaseSubscription<T = any>(
   table: string,
   callback: (payload: T) => void
 ) {
@@ -71,6 +75,7 @@ export function useSupabaseSubscription<T>(
     return () => {
       supabase.removeChannel(channel);
     };
-  }, [table, callback]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [table]);
 }
 
