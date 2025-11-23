@@ -9,7 +9,7 @@ const timeDealData = [
     originalPrice: 150000,
     discountPrice: 89000,
     discountRate: 41,
-    image: '/travel1.jpg',
+    image: '/37d526500878dd0d960969bcfe21a83c.jpg',
     dDay: '오늘만!',
   },
   {
@@ -19,7 +19,7 @@ const timeDealData = [
     originalPrice: 180000,
     discountPrice: 129000,
     discountRate: 28,
-    image: '/travel2.jpg',
+    image: '/istockphoto-579410588-612x612.jpg',
     dDay: 'D-2',
   },
   {
@@ -29,7 +29,7 @@ const timeDealData = [
     originalPrice: 120000,
     discountPrice: 79000,
     discountRate: 34,
-    image: '/travel3.jpg',
+    image: '/photo-1609766418204-94aae0ecfdfc.jpg',
     dDay: 'D-5',
   },
 ];
@@ -39,7 +39,7 @@ export default function TimeDeal() {
     <section className={styles.timeDealSection}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>⏰ 오늘의 특가</h2>
+          <h2 className={styles.sectionTitle}>오늘의 특가</h2>
           <p className={styles.sectionSubtitle}>놓치면 후회할 제주 여행 타임딜</p>
         </div>
 

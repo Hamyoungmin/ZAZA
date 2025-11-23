@@ -19,6 +19,13 @@
   gap: 0.5rem;
 }
 
+.logo {
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #1a1a1a;
+  padding: 2px;
+}
+
 .infoIcon {
   font-size: 1.2rem;
   display: inline-flex;
@@ -98,4 +105,5 @@
     padding: 0.4rem 0.8rem;
   }
 }
+
 

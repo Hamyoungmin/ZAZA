@@ -3,24 +3,24 @@ import styles from './TravelCards.module.css';
 const travelData = [
   {
     id: 1,
-    image: '/travel1.jpg',
-    title: '추천 여행지',
+    image: '/shutterstock304093253supersize-1675509746654.jpg',
+    title: '일본 여행',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.',
+      '후지산과 함께하는 일본의 아름다운 풍경을 만나보세요. 전통과 현대가 어우러진 특별한 경험을 선사합니다.',
   },
   {
     id: 2,
-    image: '/travel2.jpg',
-    title: '추천 여행지',
+    image: '/premium_photo-1661962660197-6c2430fb49a6.jpg',
+    title: '유럽 여행',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.',
+      '베니스의 낭만적인 운하와 아름다운 건축물들을 감상하세요. 유럽의 역사와 문화를 체험할 수 있습니다.',
   },
   {
     id: 3,
-    image: '/travel3.jpg',
-    title: '추천 여행지',
+    image: '/manhattan-skyline_649448-1559.avif',
+    title: '미국 여행',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.',
+      '뉴욕 맨해튼의 화려한 스카이라인을 경험하세요. 세계 금융의 중심지에서 특별한 추억을 만들어보세요.',
   },
 ];
 

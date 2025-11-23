@@ -6,19 +6,19 @@ import styles from './HeroCarousel.module.css';
 const slides = [
   {
     id: 1,
-    image: '/Main.png',
+    image: '/premium_photo-1661962660197-6c2430fb49a6.jpg',
     title: '가족과 떠나는 즐거운 제주 여행',
     description: 'Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit.',
   },
   {
     id: 2,
-    image: '/Main(Right).png',
+    image: '/premium_photo-1661962660197-6c2430fb49a6.jpg',
     title: '가족과 떠나는 즐거운 제주 여행',
     description: 'Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit.',
   },
   {
     id: 3,
-    image: '/Main.png',
+    image: '/premium_photo-1661962660197-6c2430fb49a6.jpg',
     title: '가족과 떠나는 즐거운 제주 여행',
     description: 'Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit.',
   },

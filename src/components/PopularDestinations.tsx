@@ -3,35 +3,35 @@ import styles from './PopularDestinations.module.css';
 const destinations = [
   {
     id: 1,
-    name: '성산일출봉',
-    description: '세계자연유산, 일출 명소',
-    price: '무료',
-    category: '자연',
-    image: '/circle1.jpg',
+    name: '몰디브',
+    description: '천국 같은 수상 빌라 리조트',
+    price: '₩2,500,000~',
+    category: '휴양',
+    image: '/pngtree-beautiful-maldives-travel-destination-generative-ai-image_15639253.jpg',
   },
   {
     id: 2,
-    name: '한라산',
-    description: '대한민국 최고봉',
-    price: '무료',
-    category: '자연',
-    image: '/circle2.jpg',
+    name: '태국 치앙마이',
+    description: '황금빛 사원과 전통 문화',
+    price: '₩890,000~',
+    category: '문화',
+    image: '/landmark-pagoda-doi-inthanon-national-park-chiang-mai-thailand_335224-779.avif',
   },
   {
     id: 3,
-    name: '협재해수욕장',
-    description: '에메랄드빛 바다',
-    price: '무료',
-    category: '해변',
-    image: '/circle3.jpg',
+    name: '이탈리아 친퀘테레',
+    description: '다채로운 해안 마을',
+    price: '₩1,800,000~',
+    category: '명소',
+    image: '/tourism-sea-sky-vacation-wallpaper-preview.jpg',
   },
   {
     id: 4,
-    name: '섭지코지',
-    description: '드라마 촬영지',
-    price: '무료',
-    category: '명소',
-    image: '/travel1.jpg',
+    name: '중국 상하이',
+    description: '동양의 파리, 현대와 전통',
+    price: '₩650,000~',
+    category: '도시',
+    image: '/1mj1412000b4dnyspA620_Z_640_10000_R5.jpg_.webp',
   },
 ];
 
@@ -40,7 +40,7 @@ export default function PopularDestinations() {
     <section className={styles.popularSection}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>🔥 이번 주 인기 여행지</h2>
+          <h2 className={styles.sectionTitle}>이번 주 인기 여행지</h2>
           <p className={styles.sectionSubtitle}>
             제주도에서 가장 사랑받는 명소만 모았어요
           </p>
