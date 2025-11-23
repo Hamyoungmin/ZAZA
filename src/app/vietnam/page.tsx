@@ -4,9 +4,14 @@ import { useState } from 'react';
 import styles from '../detail/detail.module.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ReservationModal from '@/components/ReservationModal';
 
 export default function VietnamPage() {
   const [selectedTab, setSelectedTab] = useState<'info' | 'schedule' | 'review'>('info');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const productName = '다낭&호이안 완전정복 4박 5일';
+  const productPrice = 620000;
 
   return (
     <div className={styles.container}>
@@ -37,7 +42,12 @@ export default function VietnamPage() {
             </div>
             <div className={styles.finalPrice}>620,000원</div>
           </div>
-          <button className={styles.reserveButton}>지금 예약하기</button>
+          <button 
+            className={styles.reserveButton}
+            onClick={() => setIsModalOpen(true)}
+          >
+            지금 예약하기
+          </button>
         </div>
       </section>
 
@@ -257,6 +267,14 @@ export default function VietnamPage() {
 
       {/* 푸터 */}
       <Footer />
+
+      {/* 예약 모달 */}
+      <ReservationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        productName={productName}
+        productPrice={productPrice}
+      />
     </div>
   );
 }

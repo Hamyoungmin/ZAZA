@@ -68,6 +68,24 @@
   padding: 20px 0;
 }
 
+/* 사이드바 스크롤바 스타일 - 파란색으로 변경 */
+.sidebarNav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebarNav::-webkit-scrollbar-track {
+  background: rgba(30, 64, 175, 0.3);
+}
+
+.sidebarNav::-webkit-scrollbar-thumb {
+  background: rgba(96, 165, 250, 0.6);
+  border-radius: 4px;
+}
+
+.sidebarNav::-webkit-scrollbar-thumb:hover {
+  background: rgba(96, 165, 250, 0.8);
+}
+
 .menuGroup {
   margin-bottom: 4px;
 }
@@ -145,7 +163,10 @@
 }
 
 .backButton {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 12px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -160,9 +181,16 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+.backIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
 .sidebarClosed .backButton {
-  font-size: 20px;
-  padding: 12px 0;
+  padding: 12px;
 }
 
 /* 메인 콘텐츠 영역 */
