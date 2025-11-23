@@ -40,6 +40,9 @@ export default function Header() {
           <Link href="/vietnam" className={styles.navLink}>
             베트남
           </Link>
+          <Link href="/admin" className={styles.navLink}>
+            Admin
+          </Link>
         </nav>
       </div>
       <div className={styles.headerLine}></div>
