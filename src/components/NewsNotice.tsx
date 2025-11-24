@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './NewsNotice.module.css';
 
 const newsData = [
@@ -61,8 +62,17 @@ const noticeData = [
 
 export default function NewsNotice() {
   const [activeTab, setActiveTab] = useState<'news' | 'notice'>('news');
+  const router = useRouter();
 
   const currentData = activeTab === 'news' ? newsData : noticeData;
+
+  const handleItemClick = (id: number) => {
+    if (activeTab === 'news') {
+      router.push(`/news/${id}`);
+    } else {
+      router.push(`/notice/${id}`);
+    }
+  };
 
   return (
     <section className={styles.newsSection}>
@@ -73,7 +83,15 @@ export default function NewsNotice() {
             className={`${styles.tabButton} ${
               activeTab === 'news' ? styles.activeTab : ''
             }`}
-            onClick={() => setActiveTab('news')}
+            onClick={() => {
+              if (activeTab === 'news') {
+                // 이미 뉴스 탭이 활성화된 상태에서 다시 클릭하면 전체 페이지로 이동
+                router.push('/news');
+              } else {
+                // 뉴스 탭으로 전환
+                setActiveTab('news');
+              }
+            }}
           >
             뉴스(News)
           </button>
@@ -81,7 +99,15 @@ export default function NewsNotice() {
             className={`${styles.tabButton} ${
               activeTab === 'notice' ? styles.activeTab : ''
             }`}
-            onClick={() => setActiveTab('notice')}
+            onClick={() => {
+              if (activeTab === 'notice') {
+                // 이미 공지 탭이 활성화된 상태에서 다시 클릭하면 전체 페이지로 이동
+                router.push('/notice');
+              } else {
+                // 공지 탭으로 전환
+                setActiveTab('notice');
+              }
+            }}
           >
             공지(Notice)
           </button>
@@ -90,7 +116,12 @@ export default function NewsNotice() {
         {/* 콘텐츠 리스트 */}
         <div className={styles.contentList}>
           {currentData.map((item) => (
-            <div key={item.id} className={styles.listItem}>
+            <div 
+              key={item.id} 
+              className={styles.listItem}
+              onClick={() => handleItemClick(item.id)}
+              style={{ cursor: 'pointer' }}
+            >
               <p className={styles.itemContent}>{item.content}</p>
               <span className={styles.itemDate}>{item.date}</span>
             </div>

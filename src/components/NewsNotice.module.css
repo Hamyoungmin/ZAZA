@@ -57,6 +57,16 @@
   padding: 1rem 0;
   border-bottom: 1px solid #f3f4f6;
   gap: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin: 0 -0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.listItem:hover {
+  background-color: #f9fafb;
+  transform: translateX(5px);
 }
 
 .listItem:last-child {
